@@ -3,6 +3,9 @@ import { twMerge } from 'tailwind-merge';
 import Button from '../ui/Button.tsx';
 import { goToBot } from '../../utils/navigation.ts';
 import arrowWhite from '../../assets/arrow-white.svg';
+import sayHello from '../../assets/howItWorks/say-hello.png';
+import makeQuery from '../../assets/howItWorks/make-query.png';
+import getAnswers from '../../assets/howItWorks/get-answers.png';
 
 type Steps = {
   title: string;
@@ -14,18 +17,21 @@ const HowItWorksSteps: FC = () => {
   const steps: Array<Steps> = [
     {
       title: 'Say Hello!',
-      description: 'Say hello to the bot and follow the instructions to get started.',
-      image: '',
+      description:
+        'Say hello to the bot and follow the instructions to get started. The bot will guide you through the process.',
+      image: sayHello,
     },
     {
       title: 'Make a Query',
-      description: 'Ask the bot any question about your wallet balance or transactions.',
-      image: 'replicate',
+      description:
+        "Send a message to the bot describing what you're looking for on the blockchain—whether it's wallet balances, transactions, or specific on-chain data.",
+      image: makeQuery,
     },
     {
       title: 'Get Simplified Answers',
-      description: 'Get instant answers from the bot on your WhatsApp.',
-      image: 'thegraph',
+      description:
+        "The bot will deliver easy-to-understand blockchain data, whether it's wallet balances or transaction details",
+      image: getAnswers,
     },
   ];
 
@@ -39,7 +45,11 @@ const HowItWorksSteps: FC = () => {
         }
       >
         <p>{steps[activeStep].description}</p>
-        <img src={steps[activeStep].image} alt={steps[activeStep].title} />
+        <img
+          className={'max-w-[296px] mx-auto'}
+          src={steps[activeStep].image}
+          alt={steps[activeStep].title}
+        />
       </div>
       <div className={'flex flex-col justify-between'}>
         <div className={'flex flex-col gap-4'}>
