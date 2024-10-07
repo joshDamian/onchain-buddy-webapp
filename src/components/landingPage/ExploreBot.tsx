@@ -21,7 +21,7 @@ const ExploreBot: FC<ExploreBotProps> = ({ sampleCommands, botWhatsAppLink }) =>
     setQuestion(e.target.value);
   };
 
-  const dynamicBotUrl = `${botWhatsAppLink}?text=${question}`;
+  const dynamicBotUrl = encodeURI(`${botWhatsAppLink}?text=${question}`);
 
   return (
     <section className={'lg:p-[100px] font-nunitoSans bg-white flex gap-[44px]'}>
