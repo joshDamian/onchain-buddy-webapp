@@ -16,7 +16,7 @@ import replicate from './assets/replicate.png';
 import neoX from './assets/neox.png';
 import Marquee from 'react-fast-marquee';
 import ExploreBot from './components/landingPage/ExploreBot.tsx';
-import { goToBot } from './utils/navigation.ts';
+import { goToBot, goToDemo } from './utils/navigation.ts';
 import HowItWorksSteps from './components/landingPage/HowItWorksSteps.tsx';
 import FeaturesList from './components/landingPage/FeaturesList.tsx';
 
@@ -70,7 +70,10 @@ function App() {
                   <p className={'text-center text-base max-w-[800px] mx-auto'}>{HERO_SUB_TEXT}</p>
                   <div className={'w-fit mx-auto flex items-center gap-[16px]'}>
                     <span className={'bg-secondaryGradient rounded-[32px] p-[1px]'}>
-                      <Button className={'bg-ob-extras-white h-[46px] gap-2'}>
+                      <Button
+                        onClick={() => goToDemo()}
+                        className={'bg-ob-extras-white h-[46px] gap-2'}
+                      >
                         <img alt={'Play icon'} src={playGradient} width={24} height={24} />
                         <span className={'bg-secondaryGradient bg-clip-text text-transparent'}>
                           Watch Demo

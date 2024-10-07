@@ -10,4 +10,7 @@ export const SAMPLE_COMMANDS = [
 
 export const BOT_WHATSAPP_LINK = 'https://wa.me/19495930082';
 
-export const GITHUB_REPO_LINK = '';
+export const DEMO_VIDEO_LINK =
+  'https://drive.google.com/file/d/15XQ9rk1qdbTb-Lv6ps54oApQQN2gs2Wt/view?usp=drive_link';
+
+export const GITHUB_REPO_LINK = 'https://github.com/joshDamian/onchain-buddy';
