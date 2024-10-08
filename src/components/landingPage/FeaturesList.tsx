@@ -25,7 +25,9 @@ const FeaturesList: FC = () => {
   return (
     <section className={'grid grid-cols-12 gap-5 text-ob-bodyText2'}>
       <div
-        className={'col-span-7 bg-ob-extras-white/50 flex-col flex gap-16 px-6 pt-6 rounded-[32px]'}
+        className={
+          'col-span-12 md:col-span-7 bg-ob-extras-white/50 flex-col flex gap-16 px-6 pt-6 rounded-[32px]'
+        }
       >
         <p className={'text-base max-w-[457px] font-normal'}>
           {FEATURES.AI_INTEGRATION.description}
@@ -33,7 +35,9 @@ const FeaturesList: FC = () => {
         <img src={FEATURES.AI_INTEGRATION.image} alt={'AI Integration'} />
       </div>
       <div
-        className={'col-span-5 bg-ob-extras-white/50 flex-col flex gap-16 px-6 pt-6 rounded-[32px]'}
+        className={
+          'col-span-12 md:col-span-5 bg-ob-extras-white/50 flex-col flex gap-16 px-6 pt-6 rounded-[32px]'
+        }
       >
         <p className={'text-base max-w-[457px] font-normal'}>
           {FEATURES.WALLET_EVENT_SUBSCRIPTIONS.description}

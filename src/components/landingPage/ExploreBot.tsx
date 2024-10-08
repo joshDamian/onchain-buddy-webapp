@@ -24,10 +24,14 @@ const ExploreBot: FC<ExploreBotProps> = ({ sampleCommands, botWhatsAppLink }) =>
   const dynamicBotUrl = encodeURI(`${botWhatsAppLink}?text=${question}`);
 
   return (
-    <section className={'lg:p-[100px] font-nunitoSans bg-white flex gap-[44px]'}>
+    <section
+      className={
+        'lg:py-[120px] lg:px-[100px] py-10 px-5 font-nunitoSans bg-white flex flex-col items-center md:items-end md:flex-row gap-[44px]'
+      }
+    >
       <section className={'flex flex-col gap-[44px] lg:max-w-[743px] w-full'}>
         <div className={'flex flex-col gap-6'}>
-          <h3 className={'text-ob-bodyText font-bold text-[32px] leading-[43.65px]'}>
+          <h3 className={'text-ob-bodyText font-bold text-2xl md:text-[32px] md:leading-[43.65px]'}>
             Ask the Bot <span className={'text-ob-primary'}>Anything,</span> Right Now!
           </h3>
           <p className={'max-w-[634px]'}>
@@ -38,7 +42,7 @@ const ExploreBot: FC<ExploreBotProps> = ({ sampleCommands, botWhatsAppLink }) =>
         <div className={'flex flex-col gap-5'}>
           <form
             className={
-              'bg-ob-extras-white rounded-[32px] h-[72px] max-w-[634px] flex lg:items-center gap-3 py-3 pr-3 pl-6'
+              'bg-ob-extras-white rounded-[32px] h-[60px] md:h-[72px] max-w-[634px] flex items-center gap-3 py-3 pr-3 pl-6'
             }
             onSubmit={(e) => {
               e.preventDefault();
@@ -76,8 +80,12 @@ const ExploreBot: FC<ExploreBotProps> = ({ sampleCommands, botWhatsAppLink }) =>
         </div>
       </section>
 
-      <div className={'flex flex-col gap-[22px]'}>
-        <QRCode value={dynamicBotUrl} size={378} className={'rounded-[32px]'} fgColor={'#3B3B3B'} />
+      <div className={'flex flex-col items-center justify-end gap-[22px]'}>
+        <QRCode
+          value={dynamicBotUrl}
+          className={'rounded-[32px] h-[230px] w-[230px] md:h-[294px] md:w-[294px]'}
+          fgColor={'#3B3B3B'}
+        />
         <div className={'text-center text-ob-bodyText2 text-[16px]'}>
           Scan to Chat with the Bot on WhatsApp!
         </div>

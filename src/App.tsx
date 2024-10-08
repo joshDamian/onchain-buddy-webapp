@@ -31,11 +31,14 @@ function App() {
           <div className={'z-[50] relative'}>
             <header
               className={
-                'px-6 lg:mx-[100px] sticky top-0 z-[99] rounded-[40px] bg-opacity-40 bg-ob-extras-white py-4 flex justify-between lg:h-[80px] items-center backdrop-blur-[25px]'
+                'px-5 mx-5 py-3 md:px-6 md:mx-[100px] fixed inset-x-0 top-4 z-[99] rounded-[60px] h-[70px] md:rounded-[40px] bg-opacity-40 bg-ob-extras-white md:py-4 flex justify-between lg:h-[80px] items-center backdrop-blur-[25px]'
               }
             >
               <section>
-                <a href={'#'} className={'text-ob-primary uppercase font-righteous text-xl'}>
+                <a
+                  href={'#'}
+                  className={'text-ob-primary uppercase font-righteous text-lg md:text-xl'}
+                >
                   onchain buddy
                 </a>
               </section>
@@ -61,13 +64,19 @@ function App() {
                 </Button>
               </section>
             </header>
-            <section id={'hero'} className={'lg:pt-[100px] pt-12'}>
+            <section id={'hero'} className={'lg:pt-[180px] px-5 md:px-0 pt-[118px]'}>
               <section className={'flex text-ob-bodyText flex-col gap-[74px]'}>
-                <div className={'flex flex-col gap-6'}>
-                  <h3 className={'text-[52px] font-bold max-w-[830px] mx-auto text-center'}>
+                <div className={'flex flex-col gap-8 md:gap-6'}>
+                  <h3
+                    className={
+                      'text-[28px] md:text-[52px] font-bold max-w-[830px] mx-auto text-center'
+                    }
+                  >
                     {HERO_TEXT}
                   </h3>
-                  <p className={'text-center text-base max-w-[800px] mx-auto'}>{HERO_SUB_TEXT}</p>
+                  <p className={'text-center text-sm md:text-base max-w-[800px] mx-auto'}>
+                    {HERO_SUB_TEXT}
+                  </p>
                   <div className={'w-fit mx-auto flex items-center gap-[16px]'}>
                     <span className={'bg-secondaryGradient rounded-[32px] p-[1px]'}>
                       <Button
@@ -88,13 +97,13 @@ function App() {
                 </div>
 
                 <section className={'flex lg:px-[100px] justify-center'}>
-                  <img src={heroImage} className={'w-full flex-1'} alt={'bot preview'} />
+                  <img src={heroImage} className={'w-full h-full flex-1'} alt={'bot preview'} />
                 </section>
               </section>
             </section>
           </div>
         </section>
-        <section className={'bg-ob-extras-offWhite flex items-center py-[23px] relative'}>
+        <section className={'bg-ob-extras-offWhite flex items-center py-[25px]'}>
           <Marquee>
             <img
               alt={'Neo X logo'}
@@ -120,7 +129,7 @@ function App() {
         </section>
         <section
           id={'how-it-works'}
-          className={'lg:px-[100px] flex flex-col gap-[80px] lg:py-[100px] bg-white'}
+          className={'lg:px-[100px] flex flex-col gap-[80px] px-5 py-10 md:py-[120px] bg-white'}
         >
           <div className={'flex flex-col gap-6'}>
             <div className={'flex justify-center'}>
@@ -134,7 +143,9 @@ function App() {
             </div>
 
             <h3
-              className={'text-ob-bodyText text-center font-bold text-[31px] max-w-[916px] mx-auto'}
+              className={
+                'text-ob-bodyText text-center font-bold text-2xl md:text-[31px] max-w-[916px] mx-auto'
+              }
             >
               Discover how easy it is to search for blockchain-related data using{' '}
               <span className={'text-ob-primary'}>onchain buddy</span>
@@ -144,7 +155,9 @@ function App() {
         </section>
         <section
           id={'features'}
-          className={'lg:px-[100px] flex flex-col gap-16 lg:py-[100px] bg-purpleGradient'}
+          className={
+            'lg:px-[100px] flex flex-col gap-10 lg:gap-16 py-10 px-5 lg:py-[120px] bg-purpleGradient'
+          }
         >
           <div className={'flex flex-col gap-6'}>
             <div className={'flex justify-left'}>
@@ -157,7 +170,11 @@ function App() {
               </span>
             </div>
 
-            <h3 className={'text-ob-bodyText text-left font-bold text-[31px] max-w-[610px]'}>
+            <h3
+              className={
+                'text-ob-bodyText text-left font-bold text-2xl md:text-[31px] max-w-[610px]'
+              }
+            >
               AI Integration, Wallet Event Subscriptions and Data Visualization
             </h3>
           </div>
@@ -167,7 +184,11 @@ function App() {
           <ExploreBot sampleCommands={SAMPLE_COMMANDS} botWhatsAppLink={BOT_WHATSAPP_LINK} />
         </section>
         <footer className={'bg-ob-extras-white font-nunitoSans'}>
-          <div className={'pt-[32px] pb-[53px] flex items-center lg:px-[100px] justify-between'}>
+          <div
+            className={
+              'pt-[32px] pb-10 md:pb-[53px] flex items-center px-5 md:px-[100px] justify-between'
+            }
+          >
             <button
               onClick={() => window.scrollTo(0, 0)}
               className={'text-ob-primary uppercase font-righteous text-xl'}
@@ -180,13 +201,17 @@ function App() {
           </div>
           <div
             className={
-              'border-t py-4 lg:px-[100px] flex items-center justify-between border-ob-extras-gray'
+              'border-t py-4 px-5 md:px-[100px] flex flex-col gap-3 md:flex-row items-center justify-between border-ob-extras-gray'
             }
           >
-            <span className={'text-ob-extras-black text-[10px]'}>
+            <span className={'text-ob-extras-black order-2 md:order-1 text-[10px]'}>
               {new Date().getFullYear()} Onchain buddy. All rights reserved.
             </span>
-            <ul className={'flex text-[10px] font-normal items-center gap-6'}>
+            <ul
+              className={
+                'flex order-1 md:order-2 text-[10px] font-normal items-center gap-3 md:gap-6'
+              }
+            >
               <li>
                 <a href={'#how-it-works'}>How it works</a>
               </li>

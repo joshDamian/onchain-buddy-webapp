@@ -38,10 +38,10 @@ const HowItWorksSteps: FC = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className={'grid grid-cols-2 gap-16 text-ob-bodyText'}>
+    <section className={'grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 text-ob-bodyText'}>
       <div
         className={
-          'bg-ob-extras-white flex flex-col gap-16 text-ob-bodyText font-normal rounded-[32px] px-6 pt-6'
+          'bg-ob-extras-white flex order-2 lg:order-1 flex-col gap-8 lg:gap-16 text-ob-bodyText font-normal rounded-[32px] px-6 pt-6'
         }
       >
         <p>{steps[activeStep].description}</p>
@@ -51,13 +51,20 @@ const HowItWorksSteps: FC = () => {
           alt={steps[activeStep].title}
         />
       </div>
-      <div className={'flex flex-col justify-between'}>
-        <div className={'flex flex-col gap-4'}>
+      <div className={'flex-col order-3 flex lg:hidden gap-6'}>
+        <span>Use Onchain Buddy — No sign-up required!</span>
+        <Button className={'flex items-center gap-2.5'} onClick={() => goToBot('Hello 👋')}>
+          <span>Try it now</span>
+          <img src={arrowWhite} alt={'Arrow'} />
+        </Button>
+      </div>
+      <div className={'flex flex-col order-1 lg:order-2 justify-between'}>
+        <div className={'flex flex-col gap-3 lg:gap-4'}>
           {steps.map((step, index) => (
             <button
               key={index}
               className={twMerge(
-                'text-[31px] flex gap-[43px] font-bold text-[#B3B3B3]',
+                'text-base md:text-[32px] md:leading-[43.65px] flex gap-[43px] font-bold text-[#B3B3B3]',
                 activeStep === index && 'text-ob-bodyText'
               )}
               onClick={() => setActiveStep(index)}
@@ -68,7 +75,7 @@ const HowItWorksSteps: FC = () => {
           ))}
         </div>
 
-        <div className={'flex flex-col gap-6'}>
+        <div className={'flex-col hidden lg:flex gap-6'}>
           <span>Use Onchain Buddy — No sign-up required!</span>
           <Button className={'flex items-center gap-2.5'} onClick={() => goToBot('Hello 👋')}>
             <span>Try it now</span>
