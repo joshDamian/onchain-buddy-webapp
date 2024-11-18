@@ -31,7 +31,7 @@ function App() {
           <div className={'z-[50] relative'}>
             <header
               className={
-                'px-5 mx-5 py-3 md:px-6 md:mx-[100px] fixed inset-x-0 top-4 z-[99] rounded-[60px] h-[70px] md:rounded-[40px] bg-opacity-40 bg-ob-extras-white md:py-4 flex justify-between lg:h-[80px] items-center backdrop-blur-[25px]'
+                'px-5 w-[calc(100vw-40px)] translate-x-[20px] py-3 md:px-6 lg:max-w-[1400px] fixed top-4 z-[99] rounded-[60px] h-[70px] md:rounded-[40px] bg-opacity-40 bg-ob-extras-white md:py-4 flex justify-between lg:h-[80px] items-center backdrop-blur-[25px]'
               }
             >
               <section>
